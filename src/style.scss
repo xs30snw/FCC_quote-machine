@@ -1,3 +1,161 @@
-#root {
+/* ------------------------ */
+/* Table of contents        */
+/* ------------------------ */
+/* 1. Properties            */
+/* 2. Layout                */
+/* 3. Quote box             */
+/* 4. Typography            */
+/* 5. Utility               */
+/* 6. Media queries         */
+/* ------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&Roboto+Slab:wght@400;600&display=swap');
+
+/* ------------------------ */
+/* 1.PROPERTIES             */
+/* ------------------------ */
+
+$rem-size: 20px;
+$bg-color: hsl(0, 0%, 95%);
+$card-primary-color: hsl(0, 0%, 100%);
+$card-secondary-color: hsl(0, 0%, 40%);
+$shadow-color: hsl(0deg 0% 85%);
+
+$font-serif: 'Roboto Slab', serif;
+$font-sans: 'Quicksand', sans-serif;
+
+
+/* ------------------------ */
+/* 2.LAYOUT                 */
+/* ------------------------ */
+
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $bg-color;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    width: 450px;
+}
+
+.container {
+    padding: 1rem 1.5rem;
+}
+
+
+/* ------------------------ */
+/* 3.QUOTE BOX              */
+/* ------------------------ */
+
+#quote-box {
+    border-radius: .25rem;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+#quote-box-header {
+    background-color: $card-primary-color;
+
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+
+    text-align: center;
+}
+
+#quote-box-footer {
+    background-color: $card-secondary-color;
+
+    display: grid;
+    grid-template-areas: " new   .    tweet ";
+    grid-template-columns: auto  1fr  auto;
+}
+
+#new-quote {
+    grid-area: new;
+}
+
+#tweet-quote {
+    grid-area: tweet;
+
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+
+/* ------------------------ */
+/* 4.TYPOGRAPHY             */
+/* ------------------------ */
+
+html {
+    font-size: $rem-size;
+}
+
+#quote-box-text {
+    font-size: 1.5rem;
+}
+
+#quote-box-author {
+    font-family: $font-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: $card-secondary-color;
+}
+
+#new-quote,
+#tweet-quote {
+    font-size: 1rem;
+}
+
+#new-quote,
+#tweet-quote,
+button,
+a {
+    color: $bg-color;
+}
+
+svg {
+    fill: $bg-color;
+    width: 32px;
+    height: 32px;
+}
+
+#quote-box-text,
+#new-quote,
+#tweet-quote {
+    font-family: $font-sans;
+}
+
+a {    
+    text-decoration: none;
+}
+
+
+/* ------------------------ */
+/* 5.UTILITY                */
+/* ------------------------ */
+
+.wrapper {
+    box-shadow: 0 0 0.5rem $shadow-color;
+}
+
+button,
+a {
+    cursor: pointer;
 }
