@@ -107,11 +107,11 @@ html {
     font-size: $rem-size;
 }
 
-#quote-box-text {
+.quoteBoxText {
     font-size: 1.5rem;
 }
 
-#quote-box-author {
+.quoteBoxAuthor {
     font-family: $font-serif;
     font-weight: 700;
     font-size: 1.3rem;
@@ -136,7 +136,7 @@ svg {
     height: 32px;
 }
 
-#quote-box-text,
+.quoteBoxText,
 #new-quote,
 #tweet-quote {
     font-family: $font-sans;
