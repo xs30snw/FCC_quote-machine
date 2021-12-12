@@ -5,6 +5,8 @@ This is my solution to [Random Quote Machine challenge](https://www.freecodecamp
 The site was built with Webpack bundler and Tailwind styles.
 Quotes are taken from [GoodReads](https://www.goodreads.com/quotes).
 
+- Live Site URL: [Heroku](https://fcc-quote-machine.herokuapp.com/)
+
 ## Screenshot
 
 ![](./screenshot.png)
