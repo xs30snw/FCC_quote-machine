@@ -4,7 +4,7 @@ import useFetch from './useFetch';
 
 const App = () => {
 
-    const { data, isLoading } = useFetch('http://127.0.0.1:3000/quotes');
+    const { data, isLoading } = useFetch('https://fcc-quote-machine.herokuapp.com/quotes');
     const [ id, setId ] = useState(0);
 
     const changeQuote = () => {
