@@ -6,7 +6,6 @@
 /* 3. Quote box             */
 /* 4. Typography            */
 /* 5. Utility               */
-/* 6. Media queries         */
 /* ------------------------ */
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&Roboto+Slab:wght@400;600&display=swap');
@@ -158,4 +157,10 @@ a {
 button,
 a {
     cursor: pointer;
+}
+
+button:hover,
+a:hover {
+    color: $card-primary-color !important;
+    text-decoration: underline;
 }

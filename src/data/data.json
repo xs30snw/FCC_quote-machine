@@ -1,23 +1,32 @@
 {
 
+    "info": {
+        "totalQuotes": 5
+    },
+
     "quotes":[
         {
+          "id": 1,
           "text": "Be yourself; everyone else is already taken.",
           "author": "Oscar Wilde"
         },
         {
+          "id": 2,
           "text": "A room without books is like a body without a soul.",
           "author": "Marcus Tullius Cicero"
         },
         {
+          "id": 3,
           "text": "If you tell the truth, you don't have to remember anything.",
           "author": "Mark Twain"
         },
         {
+          "id": 4,
           "text": "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
           "author": "Maya Angelou"
         },
         {
+          "id": 5,
           "text": "It is better to be hated for what you are than to be loved for what you are not.",
           "author": "Andre Gide"
         }

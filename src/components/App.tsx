@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import QuoteBox from './QuoteBox';
+import useFetch from './useFetch';
 
-function App() {
+const App = () => {
 
-    const [quotes, setQuotes] = useState(null);
+    const { data, isLoading } = useFetch('http://127.0.0.1:3000/quotes');
+    const [ id, setId ] = useState(0);
 
-    useEffect( () => {
-        fetch('http://127.0.0.1:3000/quotes')
-            .then( res  => res.json() )
-            .then( data => setQuotes(data) )            
-    }, []);
+    const changeQuote = () => {
+        const randomId = Math.floor(Math.random() * 5);
+        setId(randomId);
+    };
 
     return (
-        <div>
-            { quotes && <QuoteBox quotes={quotes} />}
-        </div>
+        <React.Fragment>            
+
+            { isLoading && <QuoteBox text="Loading..." author="Loading..." /> }
+            { data && <QuoteBox text={data[id].text} author={data[id].author} handleClick={changeQuote} /> }
+
+        </React.Fragment>
     )
-}
+};
 
 export default App;
